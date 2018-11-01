@@ -8,14 +8,56 @@ public class PA7a {
 		Scanner scanner = new Scanner(System.in);
 		System.out.print("Enter a year and day to start on (Sunday = 0)");
 		int year = scanner.nextInt();
-		int DayOfWeek = scanner.nextInt();
-		
+		int getStartDay = scanner.nextInt();
+
+
+		int january = 31;
+		int febuary = 28;
+		int march = 31;
+		int april = 30;
+		int may = 31;
+		int june = 30;
+		int july = 31;
+		int august = 31;
+		int september = 30;
+		int october = 31;
+		int november = 30;
+		int december = 31;
+
 		boolean isLeapYear = (year % 4 == 0 && year % 100 != 0) || (year % 400 == 0);
 
 		if (isLeapYear == true) {
-
+			febuary = 29;
 		}
-		
+		int i = 0;
+		for (i = 0; i < january; i++) {
+			System.out.printf("%4d", i);	
+		}
+	}
+
+	public static void printMonth(int year, int month) {
+		printMonthTitle(year, month);
+		printMonthBody(year, month);
+	}
+	public static void printMonthTitle(int year, int month) {
+		System.out.println("         " + getMonthName(month)
+		+ " " + year);
+		System.out.println("-----------------------------");
+		System.out.println(" Sun Mon Tue Wed Thu Fri Sat");
+	}
+	public static void printMonthBody(int year, int month) {
+		int startDay = getStartDay(year, month, 1);
+		int numberOfDaysInMonth = getNumberOfDaysInMonth(year, month);
+		int i;
+		for (i = 0; i < startDay; i++)
+			System.out.print("    ");
+		for (i = 1; i <= numberOfDaysInMonth; i++) {
+			System.out.printf("%4d", i);
+			if ((i + startDay) % 7 == 0)
+				System.out.println();
+		}
+
+		System.out.println();
 	}
 
 }
@@ -187,10 +229,10 @@ public class PROB17 {
 		default:
 			monthNumber = 0;
 			break;
-			
-			
+
+
 			}
 		}
 
 	}
-*/
+ */
