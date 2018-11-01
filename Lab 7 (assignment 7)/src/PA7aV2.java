@@ -46,6 +46,20 @@ public class PA7aV2 {
 		int startDay = getStartDay(year, month, 1);
 		int numberOfDaysInMonth = getNumberOfDaysInMonth(year, month);
 		int i;
+
+		int january = 31;
+		int febuary = 28;
+		int march = 31;
+		int april = 30;
+		int may = 31;
+		int june = 30;
+		int july = 31;
+		int august = 31;
+		int september = 30;
+		int october = 31;
+		int november = 30;
+		int december = 31;
+
 		for (i = 0; i < startDay; i++)
 			System.out.print("    ");
 		for (i = 1; i <= numberOfDaysInMonth; i++) {
@@ -53,8 +67,11 @@ public class PA7aV2 {
 			if ((i + startDay) % 7 == 0)
 				System.out.println();
 		}
-
-		System.out.println();
+			for (i = 1; i <= febuary; i++) {
+				System.out.printf("%4d", i);
+			
+			System.out.println();
+		}
 	}
 	public static int getStartDay(int year, int month, int day) {
 		if (month == 1) {
