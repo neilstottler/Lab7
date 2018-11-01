@@ -9,6 +9,13 @@ public class PA7a {
 		System.out.print("Enter a year and day to start on (Sunday = 0)");
 		int year = scanner.nextInt();
 		int DayOfWeek = scanner.nextInt();
+		
+		boolean isLeapYear = (year % 4 == 0 && year % 100 != 0) || (year % 400 == 0);
+
+		if (isLeapYear == true) {
+
+		}
+		
 	}
 
 }
