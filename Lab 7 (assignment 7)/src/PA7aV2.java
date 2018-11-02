@@ -60,18 +60,30 @@ public class PA7aV2 {
 		int november = 30;
 		int december = 31;
 
+		// start output with january
 		for (i = 0; i < startDay; i++)
 			System.out.print("    ");
 		for (i = 1; i <= numberOfDaysInMonth; i++) {
 			System.out.printf("%4d", i);
 			if ((i + startDay) % 7 == 0)
-				System.out.println();
+				System.out.printf(" ");
+				
 		}
-			for (i = 1; i <= febuary; i++) {
-				System.out.printf("%4d", i);
-			
-			System.out.println();
+		System.out.printf("");
+		//output febuary
+		for (i = 0; i < febuary; i++)
+			System.out.print("    ");
+		for (i = 1; i <= febuary; i++) {
+			System.out.printf("%4d", i);
+			if ((i + startDay) % 7 == 0)
+				System.out.printf("\n");
+				
 		}
+		
+
+
+		System.out.println();
+
 	}
 	public static int getStartDay(int year, int month, int day) {
 		if (month == 1) {

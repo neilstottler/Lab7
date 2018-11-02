@@ -53,8 +53,6 @@ public class PA7a {
 			System.out.print("    ");
 		for (i = 1; i <= numberOfDaysInMonth; i++) {
 			System.out.printf("%4d", i);
-			if ((i + startDay) % 7 == 0)
-				System.out.println();
 		}
 
 		System.out.println();
