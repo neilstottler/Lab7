@@ -19,6 +19,7 @@ public class PA7aV4 {
 		
 		Scanner reader = new Scanner(System.in);
 		
+		System.out.print("Enter a day to start on and the year to check for leap year");
 		int startDay = reader.nextInt();
 		
 		int year = reader.nextInt();
@@ -29,7 +30,6 @@ public class PA7aV4 {
 		}else {
 			february = new Month("Febuary", 28);
 		}
-		
 		march = new Month("March", 31);
 		april = new Month("April", 30);
 		may = new Month("May", 31);
@@ -41,6 +41,7 @@ public class PA7aV4 {
 		november = new Month("November", 30);
 		december = new Month("December", 31);
 		
+		
 		january.editArray(startDay);
 		february.editArray(january.nextStartDay());
 		march.editArray(february.nextStartDay());
@@ -49,10 +50,7 @@ public class PA7aV4 {
 		june.editArray(may.nextStartDay());
 		july.editArray(june.nextStartDay());
 		august.editArray(july.nextStartDay());
-		september.editArray(august.nextStartDay());
-		
-		System.out.println(september.toString());
-		
+		september.editArray(august.nextStartDay());		
 		october.editArray(september.nextStartDay());
 		november.editArray(october.nextStartDay());
 		december.editArray(november.nextStartDay());
@@ -92,7 +90,6 @@ class Month{
 	
 	public void editArray(int a) {
 		int tempDay = 1;
-		System.out.println(month);
 		for(int i = 0; i < monthArray.length; i++){
 			if(i == 0){
 				for(int j = a-1; j < monthArray[i].length; j++) {
