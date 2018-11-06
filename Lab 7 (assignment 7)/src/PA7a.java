@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class PA7a {
 
-	public static void main(String[] args) {
+	/**public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
 		Scanner scanner = new Scanner(System.in);
@@ -60,7 +60,7 @@ public class PA7a {
 
 }
 
-/** code from similar problem CH6 PROB34
+ code from similar problem CH6 PROB34
 import java.util.Scanner;
 public class PROB34 {
 
@@ -234,3 +234,4 @@ public class PROB17 {
 
 	}
  */
+}
