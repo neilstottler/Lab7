@@ -24,6 +24,9 @@ public class PA7aV4 {
 		
 		int year = reader.nextInt();
 		
+
+		System.out.println(" Sun Mon Tue Wed Thu Fri Sat");
+		
 		january = new Month("January", 31);
 		if(isLeapYear(year)) {
 			february = new Month("Feburay", 29);
@@ -40,8 +43,7 @@ public class PA7aV4 {
 		october = new Month("October", 31);
 		november = new Month("November", 30);
 		december = new Month("December", 31);
-		
-		
+			
 		january.editArray(startDay);
 		february.editArray(january.nextStartDay());
 		march.editArray(february.nextStartDay());
@@ -130,9 +132,10 @@ class Month{
 		str = str + month;
 		str = str + "\n";
 		
+		
 		for(int i = 0; i < monthArray.length; i++){
 			for(int j = 0; j < monthArray[i].length; j++) {
-				str = str + "[" + monthArray[i][j] + "]";
+				str = str + " " + monthArray[i][j] + " ";
 			}
 			str = str +"\n";
 		}
